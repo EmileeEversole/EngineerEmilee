@@ -406,12 +406,14 @@ Dark Mode
 }
 .dark .contact input {
   background-color: var(--d-bg-blue);
+  color: var(--white);
 }
 .dark .contact input::placeholder {
   color: var(--white);
 }
 .dark .message {
   background-color: var(--d-bg-blue);
+  color: var(--white);
 }
 .dark .message::placeholder {
   color: var(--white);
