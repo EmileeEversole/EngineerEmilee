@@ -121,72 +121,6 @@ header {
   transition: var(--transition);
   overflow: hidden;
 }
-.cloud1 {
-  position: absolute;
-  background: transparent url(images/cloud-1.svg) no-repeat;
-   top: 5vh;
-   left: 0;
-   width: 70vw;
-   height: 30vh;
-   background-size: contain;
-  animation: cloud-move 40s linear infinite;
-  opacity: 0.65;
-}
-.cloud2 {
-  position: absolute;
-  background: transparent url(images/cloud-2.svg) no-repeat;
-   top: 30vh;
-   width: 70vw;
-   height: 30vh;
-   background-size: contain;
-  animation: cloud-move 60s linear infinite;
-  opacity: 0.5;
-}
-.cloud3 {
-  position: absolute;
-  background: transparent url(images/cloud-3.svg) no-repeat;
-   top: 70vh;
-   width: 50vw;
-   height: 40vh;
-   background-size: contain;
-  animation: cloud-move 30s linear infinite;
-  opacity: 0.5;
-
-}
-@keyframes cloud-move {
-  0%{transform: translate(-70vw);}
-  99%{transform: translate(100vw);}
-  100%{transform: translateX(100vw);}
-}
-.night-sky {
-  opacity: 0;
-  transition: 0.1s;
-  overflow: hidden;
-  transition-delay: -0.3s;
-}
-.stars {
-  position: absolute;
-  background: transparent url(images/stars.svg) repeat;
-   background-size: contain;
-   height: 100vh;
-   width: 100vw;
-   opacity: 0.75;
-}
-.twinkle{
-  position: absolute;
-  background: transparent url("images/twinkle.svg") repeat;
-  height: 100vh;
-  width: 1000vw;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  animation:move-background 100s linear infinite;
-  opacity: 1;
-}
-@keyframes move-background {
-  from {transform: translate3d(0px, 0px, 0px);}
-	to {transform: translate3d(1000px, 0px, 0px);}
-}
 .sun-moon {
   position: relative;
 }
@@ -360,15 +294,6 @@ Dark Mode
 .dark .moon {
   transform: translateY(0);
   opacity: 1;
-}
-.dark .day-sky {
-  opacity: 0;
-  transition: var(--transition);
-  transition-delay: -0.3s; 
-}
-.dark .night-sky {
-  opacity: 1;
-  transition-delay: 0.3s;
 }
 .dark .success-msg {
   background-color: var(--d-primary-half);
