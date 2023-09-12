@@ -646,6 +646,10 @@ Active
   .sky {
     min-height: 125svh;
   }
+  .sun,
+  .moon {
+    display: none;
+  }
 }
 @media screen and (max-width:480px) {
   .mountains {
@@ -653,7 +657,7 @@ Active
   }
   .sun,
   .moon {
-    top: 65vh;
+    top: 55vh;
   }
   form {
     display: flex;
@@ -723,6 +727,10 @@ Active
     .sky {
       min-height: 125svh;
     }
+    .sun,
+    .moon {
+      display: none;
+    }
   }
 }
 @media screen and (min-width:1205px) {
@@ -773,5 +781,9 @@ Active
     .sky {
       min-height: 125svh;
     }
+    .sun,
+    .moon {
+      display: none;
+   }
   }
 }
