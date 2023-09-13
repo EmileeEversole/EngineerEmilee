@@ -32,7 +32,7 @@ const disableDarkMode = () => {
 }
 
 toggle.forEach((btn) => { 
-  btn.addEventListener('click', () => {
+  btn.addEventListener('touchTap', () => {
     darkMode = localStorage.getItem("dark-mode");
     if(darkMode === "disabled") {
         enableDarkMode();
@@ -49,4 +49,3 @@ if (darkMode === "enabled") {
 else {
   disableDarkMode
 }
-
