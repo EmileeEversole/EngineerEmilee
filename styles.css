@@ -313,7 +313,7 @@ Dark Mode
 }
 .dark .night-sky {
   opacity: 1;
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 .dark .mountains {
   background-image: var(--desktop-dark-mountains);
