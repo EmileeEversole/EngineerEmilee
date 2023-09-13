@@ -121,30 +121,6 @@ header {
   transition: var(--transition);
   overflow: hidden;
 }
-.sun-moon {
-  position: relative;
-}
-.sun, 
-.moon {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: contain;
-   height: 10vh;
-   width: 10vh;
-   left: 12.5vw;
-   top: 50vh;
-   transition: var(--transition);
-}
-.sun {
-   background-image: url(images/sun.svg);
-   transform: translateY(0);
-   opacity: 1;
-}
-.moon {
-   background-image: url(images/moon.svg);
-   opacity: 0;
-   transform: translateY(100vh);
-}
 .mountains {
   position: absolute;
   background-image: var(--desktop-light-mountains);
@@ -286,14 +262,6 @@ Dark Mode
 .dark .contact, 
 .dark .mission li {
   background-color: var(--d-primary-half);
-}
-.dark .sun {
-  transform: translateY(100vh);
-  opacity: 0;
-}
-.dark .moon {
-  transform: translateY(0);
-  opacity: 1;
 }
 .dark .success-msg {
   background-color: var(--d-primary-half);
@@ -646,18 +614,10 @@ Active
   .sky {
     min-height: 125svh;
   }
-  .sun,
-  .moon {
-    display: none;
-  }
 }
 @media screen and (max-width:480px) {
   .mountains {
     height: 50vh;
-  }
-  .sun,
-  .moon {
-    top: 55vh;
   }
   form {
     display: flex;
@@ -706,10 +666,6 @@ Active
   .header-info p {
     padding: 0 5vw 5vh;
   }
-  .sun, 
-  .moon{
-    left: 17.5vw;
-  }
   .services ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
@@ -726,10 +682,6 @@ Active
     }
     .sky {
       min-height: 125svh;
-    }
-    .sun,
-    .moon {
-      display: none;
     }
   }
 }
@@ -755,11 +707,6 @@ Active
   .mountains {
     height: 75vh;
   }
-  .sun,
-  .moon {
-    top: 50vh;
-    left: 30vw;
-  }
   .services ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -781,9 +728,5 @@ Active
     .sky {
       min-height: 125svh;
     }
-    .sun,
-    .moon {
-      display: none;
-   }
   }
 }
