@@ -47,7 +47,6 @@ if (darkMode === "enabled") {
   enableDarkMode();
 }
 else {
-  disableDarkMode
+  disableDarkMode();
 }
 
-enableDarkMode ();

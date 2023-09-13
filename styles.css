@@ -139,8 +139,81 @@ header {
    min-width: 100vw;
   overflow: hidden;
 }
-.dark .mountains {
-  background-image: var(--desktop-dark-mountains);
+
+/* Light-Mode Background Design */
+.day-sky {
+  opacity: 1;
+  transition: 0.1s;
+  overflow: hidden;
+  transition-delay: 0.3s;
+}
+.cloud1 {
+  position: absolute;
+  background: transparent url(images/cloud-1.svg) no-repeat;
+   top: 5vh;
+   left: 0;
+   width: 70vw;
+   height: 30vh;
+   background-size: contain;
+  animation: cloud-move 40s linear infinite;
+  opacity: 0.65;
+}
+.cloud2 {
+  position: absolute;
+  background: transparent url(images/cloud-2.svg) no-repeat;
+   top: 30vh;
+   width: 70vw;
+   height: 30vh;
+   background-size: contain;
+  animation: cloud-move 60s linear infinite;
+  opacity: 0.5;
+}
+.cloud3 {
+  position: absolute;
+  background: transparent url(images/cloud-3.svg) no-repeat;
+   top: 70vh;
+   width: 50vw;
+   height: 40vh;
+   background-size: contain;
+  animation: cloud-move 30s linear infinite;
+  opacity: 0.5;
+
+}
+@keyframes cloud-move {
+  0%{transform: translate(-70vw);}
+  99%{transform: translate(100vw);}
+  100%{transform: translateX(100vw);}
+}
+
+/* Dark-Mode Background Design */
+.night-sky {
+  opacity: 0;
+  transition: 0.1s;
+  overflow: hidden;
+  transition-delay: -0.3s;
+}
+.stars {
+  position: absolute;
+  background: transparent url(images/stars.svg) repeat;
+   background-size: contain;
+   height: 100vh;
+   width: 100vw;
+   opacity: 0.75;
+}
+.twinkle{
+  position: absolute;
+  background: transparent url("images/twinkle.svg") repeat;
+  height: 100vh;
+  width: 1000vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  animation:move-background 100s linear infinite;
+  opacity: 1;
+}
+@keyframes move-background {
+  from {transform: translate3d(0px, 0px, 0px);}
+	to {transform: translate3d(1000px, 0px, 0px);}
 }
 
 /* Logo and Toggle Button */
@@ -232,6 +305,18 @@ Dark Mode
 .dark .sky {
   background-position: top;
   transition: var(--transition);
+}
+.dark .day-sky {
+  opacity: 0;
+  transition: var(--transition);
+  transition-delay: -0.3s; 
+}
+.dark .night-sky {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.dark .mountains {
+  background-image: var(--desktop-dark-mountains);
 }
 .dark .gradient {
   background-image: linear-gradient(to bottom, #232d47, #2d3956, #364665, #405375, #4a6185);
